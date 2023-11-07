@@ -1,0 +1,312 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --theme : linear-gradient(45deg,rgba(59,11,85,1) 0%, #6368a3 100%); 
+  --text-primary: rgb(199, 199, 199);
+  --text-secondary: rgb(67, 91, 116);
+  --p-size : 1.1rem;
+  --h-size : 2rem;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+body{
+    background: rgb(163,171,255);
+    background: var(--theme);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: var(--text-primary);
+    max-height: fit-content;
+    padding-bottom: 2rem;
+    
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+}
+
+.form,.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 60vw;
+    margin: auto;
+}
+
+
+
+h1{
+    text-align: center;
+    margin-block: 2rem;
+    font-size: var(--h-size);
+    font-weight: 500;
+}
+
+.wrapper{
+    width: 90vw;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-bottom: 5rem;
+}
+
+.podcastCard{
+    width: 350px;
+    height: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    /* border: 2px solid #ffffff; */
+    background: linear-gradient(178deg, rgba(97, 171, 201, 0.932) 1.63%, rgba(106, 31, 219, 0.836) 148.18%);
+    box-shadow: rgba(50, 50, 93, 0.847) 0px 13px 27px -5px, rgba(0, 0, 0, 0.785) 0px 8px 16px -8px;
+    opacity: 0.7;
+}
+.podcastCard:hover{
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+.podcastCard img{
+    width: 100%;
+    height: 90%;
+    margin-bottom: 7px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.podcastCard-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.podcastCard-info > * {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+
+.pod-wrapper{
+    display: flex;
+    gap: 2rem;
+    width: 90vw;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pod-desc{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.Toastify{
+    background-color: var(--theme) !important;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+.btn-wrapper > .btn {
+    width: fit-content;
+}
+
+.pod-det-wrapper{
+    width: 90vw;
+    margin: auto; 
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+}
+
+.pod-det-wrapper > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.episode-cont{
+    margin-bottom: 7.5rem;
+}
+
+.profilePic{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+}
+
+.profilePic svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.profilePic input{
+    display: none;
+}
+.info{
+    margin-top: 2rem;
+}
+.info div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.info div div{
+    flex-grow: 1;
+    display: flex;
+}
+
+.info div div .customInput{
+    width: 85% !important;
+    display: inline;
+    padding: 0;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #68636a;
+    border-radius: 0;
+    margin: 0.5rem;
+    margin-left: 0;
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    row-gap: 2rem;
+}
+
+.btn-cont .btn{
+    width: 30%;
+    padding: 0.75rem;
+}
+
+.profilePic>img{
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    background-blend-mode: multiply;
+}
+.modal-cont{
+    position: fixed;
+    inset: 0;
+    color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(2px);
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    width: 75%;
+    height: 70%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-radius: 2rem;
+}
+
+@media screen and (width <= 865px) {
+    nav{
+        font-size: 1rem;
+    }
+
+    .podcastCard{
+        width: 500px;
+        height: 450px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+    .customInput{
+        font-size: 0.85rem ;
+    }
+    .btn{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (width <= 530px) {
+    .podcastCard{
+        width: 400px;
+        height: 350px;
+    }
+    nav{
+        /* flex-direction: column; */
+        justify-content: flex-end;
+    }
+
+
+    .navbar{
+        gap:0.25rem;
+    }
+
+    .btn-cont .btn{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 1.35rem;
+    }
+    .customInput{
+        font-size: 0.75rem ;
+    }
+    .btn{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (width <= 475px) {
+    .podcastCard{
+        width: 320px;
+    }
+
+    .info div{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info div strong, .info div div {
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .info div div input{
+        padding-left: 0 !important;
+        width: 90% !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+    }
+}
